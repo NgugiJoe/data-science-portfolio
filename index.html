@@ -1,23 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Data Science Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables for easy color theme management */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Container to keep content centered and readable */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #bdc3c7;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            margin-bottom: 25px;
+            padding-bottom: 5px;
+        }
+
+        /* Project Card Styling */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .project-card p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* Tech Stack Tags */
+        .tags {
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background-color: #e8f4f8;
+            color: var(--secondary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>My Data Science Portfolio</h1>
+    <header>
+        <div class="container">
+            <h1>My Data Science Portfolio</h1>
+            <p>Transforming Data into Actionable Insights</p>
+        </div>
+    </header>
 
-<h2>Projects</h2>
+    <main class="container">
+        <section>
+            <h2>Projects</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Global Climate Change Analysis</h3>
+                    <p>An in-depth analysis of global temperature anomalies and carbon emissions over the last century using Python and Pandas. Includes predictive modeling for future trends.</p>
+                    
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Scikit-Learn</span>
+                    </div>
 
-<ul>
-<li>
-<a href="https://github.com/NgugiJoe/project-01-climate-change">
-Global Climate Change Analysis
-</a>
-</li>
-</ul>
+                    <a href="https://github.com/NgugiJoe/project-01-climate-change" target="_blank" class="btn">View on GitHub</a>
+                </div>
+                
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Data Science Portfolio. Built with HTML & CSS.</p>
+        </div>
+    </footer>
 
 </body>
-
 </html>
